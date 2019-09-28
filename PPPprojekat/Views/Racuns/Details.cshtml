@@ -1,0 +1,66 @@
+﻿@model PPPprojekat.Racun
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Racun</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vreme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vreme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UkupnaVrednost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UkupnaVrednost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Obradjen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Obradjen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Storniran)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Storniran)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StavkaRacuna.RbStavkeRacuna)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StavkaRacuna.RbStavkeRacuna)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDRacuna }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
