@@ -37,7 +37,7 @@ namespace PPPprojekat.Controllers
         }
 
         // GET: Proizvods/Create
-        [Authorize(Users = "djuro@gmail.com")]
+        
         public ActionResult Create()
         {
             return View();
@@ -48,7 +48,6 @@ namespace PPPprojekat.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Users ="djuro@gmail.com")]
         public ActionResult Create([Bind(Include = "BarKodArtikla,Naziv,UlaznaCena,IzlaznaCena,Opis")] Proizvod proizvod)
         {
             if (ModelState.IsValid)

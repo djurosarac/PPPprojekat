@@ -27,7 +27,7 @@ namespace PPPprojekat.Controllers
             UserManager = userManager;
             SignInManager = signInManager;
         }
-
+        
         public ApplicationSignInManager SignInManager
         {
             get
@@ -136,7 +136,7 @@ namespace PPPprojekat.Controllers
 
         //
         // GET: /Account/Register
-        [AllowAnonymous]
+        [Authorize(Users = "djuro@gmail.com")]
         public ActionResult Register()
         {
             return View();
@@ -145,7 +145,7 @@ namespace PPPprojekat.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        [AllowAnonymous]
+        [Authorize(Users = "djuro@gmail.com")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
